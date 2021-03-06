@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+      <link rel="stylesheet" href="{{ asset('stylesheets/style.css') }}" media="all" />
+    {% endblock %}
+  </head>
+  <body>
+    <header id="page-header">
+      <div id="page-name">{% block pagename %}{% endblock %}</div>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer id="page-footer">
+      <div id="copy-notice">&copy; m3tro1d, 2021</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My homepage{% endblock %}
+
+{% block pagename %}Please have a seat.{% endblock %}
+
+{% block body %}
+  <div class="content content-halfpage">
+    <h1 class="content-heading">Welcome!</h1>
+    <img src="{{ asset('images/pfp.jpg') }}" alt="My profile picture" class="float-right small bordered" />
+    <p>Welcome to my page. Be sure to check out my node.js <a href="https://m3tro1d.herokuapp.com" target="_blank" class="external">website</a>.</p>
+
+    <h3 class="content-heading">My skills and hobbies</h3>
+    <ul>
+      <li>Computer programming: C, C++, Python, JavaScript, a bit of Scheme, some of batch and Vim scripting;</li>
+      <li>Cycling;</li>
+      <li>Casual article writing.</li>
+    </ul>
+    
+    <h3 class="content-heading">Stuff</h3>
+    <ul>
+      <li><a href="{{ path('homepage-movies') }}">My favorite movies</a></li>
+      <li><a href="{{ path('homepage-lucky') }}">Get your lucky number!</a></li>
+      <li><a href="{{ path('homepage-useragent') }}">Your user agent</a></li>
+    </ul>
+  </div>
+{% endblock %}

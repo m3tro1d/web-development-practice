@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My homepage | User Agent{% endblock %}
+
+{% block pagename %}What UA do you have?{% endblock %}
+
+{% block body %}
+  <div class="content content-halfpage">
+    {% for key in headers|keys %}
+      <b>{{ key }}</b>: {{ headers[key][0] }}
+      <br />
+    {% endfor %}
+
+    <a href="{{ path('homepage-index') }}"><h3 class="content-heading">Back to homepage</h3></a>
+  </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My homepage | Lucky number{% endblock %}
+
+{% block pagename %}I'm up all night to get lucky!{% endblock %}
+
+{% block body %}
+  <div class="content content-halfpage">
+    You've rolled a whole lot of <b>{{ number }}</b>! Lucky today, aren't we?
+
+    <a href="{{ path('homepage-index') }}"><h3 class="content-heading">Back to homepage</h3></a>
+  </div>
+{% endblock %}
