@@ -1,6 +1,12 @@
 " HTML
 let g:emmet_html5 = 0
 
+" CSS
+augroup css
+  autocmd!
+  autocmd FileType css setlocal shiftwidth=4
+augroup END
+
 " PHP
 augroup php
   autocmd!
