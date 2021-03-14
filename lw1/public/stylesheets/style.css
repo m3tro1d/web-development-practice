@@ -1,105 +1,105 @@
 /* Globals */
 *
 {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 
-  font-family: 'Segoe UI', Verdana, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Verdana, Helvetica, sans-serif;
 }
 
 html,
 body
 {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 a
 {
-  color: #00c6c6;
+    color: #00c6c6;
 }
 
 a:hover
 {
-  color: #009d9d;
+    color: #009d9d;
 }
 
 a.external:after
 {
-  content: url('/images/external_arrow.png');
+    content: url('/images/external_arrow.png');
 }
 
 
 /* Header */
 header#page-header
 {
-  width: 98%;
+    width: 98%;
 
-  padding: 2%;
-  padding-left: 0;
+    padding: 2%;
+    padding-left: 0;
 }
 
 header#page-header div#page-name
 {
-  font-size: 1.3em;
-  font-weight: bold;
+    font-size: 1.3em;
+    font-weight: bold;
 
-  width: 50%;
-  margin: auto;
-}
-
-
-/* Footer */
-footer#page-footer
-{
-  width: 98%;
-
-  padding: 2%;
-  padding-left: 0;
-}
-
-footer#page-footer div#copy-notice
-{
-  width: 50%;
-  margin: auto;
+    width: 50%;
+    margin: auto;
 }
 
 
 /* Content */
 div.content
 {
-  padding: 1%;
+    padding: 1%;
 }
 
 div.content-halfpage
 {
-  margin-left: 25%;
-  width: 48%;
+    margin-left: 25%;
+    width: 48%;
 }
 
 div.content h1.content-heading
 {
-  margin: 25px 0 10px;
+    margin: 25px 0 10px;
 }
 
 div.content h3.content-heading
 {
-  margin: 25px 0 5px;
+    margin: 25px 0 5px;
 }
 
 div.content img.small
 {
-  max-height: 300px;
-  width: auto;
+    max-height: 300px;
+    width: auto;
 }
 
 div.content img.float-right
 {
-  float: right;
+    float: right;
 }
 
 div.content img.bordered
 {
-  border-radius: 3%;
+    border-radius: 3%;
+}
+
+
+/* Footer */
+footer#page-footer
+{
+    width: 98%;
+
+    padding: 2%;
+    padding-left: 0;
+}
+
+footer#page-footer div#copy-notice
+{
+    width: 50%;
+    margin: auto;
 }
