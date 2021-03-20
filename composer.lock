@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f3e84892ad50204785e267a43ffd0d8",
+    "content-hash": "59ea010c99f188c5c12d7d7598a92079",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1543,6 +1543,47 @@
                 }
             ],
             "time": "2021-01-14T21:52:44+00:00"
+        },
+        {
+            "name": "ivan-uskov/image-spider",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ivan-uskov/image-spider.git",
+                "reference": "53da0bd62a4a21c52c2f704286ad29ab31f78922"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ivan-uskov/image-spider/zipball/53da0bd62a4a21c52c2f704286ad29ab31f78922",
+                "reference": "53da0bd62a4a21c52c2f704286ad29ab31f78922",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IvanUskov\\ImageSpider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Uskov",
+                    "email": "ivan.uskov@ispringsolutions.com"
+                }
+            ],
+            "description": "PHP library for searching images in Google",
+            "support": {
+                "issues": "https://github.com/ivan-uskov/image-spider/issues",
+                "source": "https://github.com/ivan-uskov/image-spider/tree/v0.1.1"
+            },
+            "time": "2021-03-19T19:02:01+00:00"
         },
         {
             "name": "laminas/laminas-code",

@@ -84,6 +84,9 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
     },
+    "ivan-uskov/image-spider": {
+        "version": "v0.1.1"
+    },
     "laminas/laminas-code": {
         "version": "4.0.0"
     },
