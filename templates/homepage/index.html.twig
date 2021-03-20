@@ -23,5 +23,18 @@
       <li><a href="{{ path('homepage-lucky') }}">Get your lucky number!</a></li>
       <li><a href="{{ path('homepage-headers') }}">Your request headers</a></li>
     </ul>
+
+    <h3 class="content-heading">My favorite things</h3>
+    <small><i>Dynamically refreshed!</i></small>
+    <div class="favorites">
+      {% for header, urls in favorites %}
+        <div class="favorites__block">
+          <h4 class="favorites__heading">{{ header }}</h4>
+          {%for url in urls %}
+            <img src="{{ url }}" alt="URL" class="favorites__image" />
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
