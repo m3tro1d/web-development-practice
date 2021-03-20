@@ -5,11 +5,17 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+use App\Module\IndexFavoritesProvider;
+
 class HomepageController extends AbstractController
 {
     public function index(): Response
     {
-        return $this->render('homepage/index.html.twig');
+        $provider = new IndexFavoritesProvider(5);
+        $favorites = $provider->getURLsByQueries('Programming', 'The Clone Wars', 'Dream Theater');
+        return $this->render('homepage/index.html.twig', [
+            'favorites' => $favorites
+        ]);
     }
 
     public function movies(): Response
