@@ -25,9 +25,9 @@ class HomepageController extends AbstractController
         ]);
     }
 
-    public function useragent(Request $request): Response
+    public function headers(Request $request): Response
     {
-        return $this->render('homepage/useragent.html.twig', [
+        return $this->render('homepage/headers.html.twig', [
             'headers' => $request->headers->all()
         ]);
     }
