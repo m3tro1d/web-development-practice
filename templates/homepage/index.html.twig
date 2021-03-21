@@ -30,8 +30,8 @@
       {% for header, urls in favorites %}
         <div class="favorites__block">
           <h4 class="favorites__heading">{{ header }}</h4>
-          {%for url in urls %}
-            <img src="{{ url }}" alt="URL" class="favorites__image" />
+          {% for url in urls %}
+            <img src="{{ url }}" alt="{{ header }} image" class="favorites__image" />
           {% endfor %}
         </div>
       {% endfor %}

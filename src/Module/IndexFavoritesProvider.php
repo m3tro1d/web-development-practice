@@ -27,27 +27,20 @@ class IndexFavoritesProvider
     }
 
     /**
-     * Gets the random image URLs and limits them according to the $amountPerQuery
+     * Returns random image URLs
      */
     private function getURLsForQuery(string $query): array
     {
-        $urls = ImageSpider::find($this->normalizeQuery($query));
-        return array_slice($urls, $this->randomOffset($urls), $this->amountPerQuery);
+        $urls = ImageSpider::find(urlencode($query));
+        return $this->randomizeAndLimit($urls);
     }
 
     /**
-     * Returns a ready-to-process query
+     * Shuffles the URLs array and limits the result according to the $amountPerQuery
      */
-    private function normalizeQuery(string $query): string
+    private function randomizeAndLimit(array $urls)
     {
-        return str_replace(' ', '+', $query);
-    }
-
-    /**
-     * Returns a random array offset number according to the $amountPerQuery
-     */
-    private function randomOffset(array $arr): int
-    {
-        return rand(0, count($arr) - $this->amountPerQuery - 1);
+        shuffle($urls);
+        return array_slice($urls, 0, $this->amountPerQuery);
     }
 }
