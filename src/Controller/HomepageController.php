@@ -12,7 +12,7 @@ class HomepageController extends AbstractController
     public function index(): Response
     {
         $provider = new IndexFavoritesProvider(5);
-        $favorites = $provider->getURLsByQueries('Programming', 'The Clone Wars', 'Dream Theater');
+        $favorites = $provider->getDatasetsByQueries('Programming', 'The Clone Wars', 'Dream Theater');
         return $this->render('homepage/index.html.twig', [
             'favorites' => $favorites
         ]);

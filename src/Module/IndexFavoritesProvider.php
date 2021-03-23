@@ -3,7 +3,7 @@ namespace App\Module;
 
 use IvanUskov\ImageSpider\ImageSpider;
 
-class IndexFavoritesProvider
+class IndexFavoritesProvider implements IQueryDataProvider
 {
     private int $amountPerQuery;
 
@@ -16,7 +16,7 @@ class IndexFavoritesProvider
      * Returns a dictionary with the following elements:
      * 'Query' => [ 'URL1', 'URL2', ... ]
      */
-    public function getURLsByQueries(string ...$queries): array
+    public function getDatasetsByQueries(string ...$queries): array
     {
         $result = [];
         foreach ($queries as $index => $query)
@@ -36,7 +36,7 @@ class IndexFavoritesProvider
     }
 
     /**
-     * Shuffles the URLs array and limits the result according to the $amountPerQuery
+     * Shuffles the array and limits the result according to the $amountPerQuery
      */
     private function randomizeAndLimit(array $urls)
     {
