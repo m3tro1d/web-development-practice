@@ -13,5 +13,11 @@ augroup php
   autocmd FileType php setlocal shiftwidth=4
 augroup END
 
+" Javascript
+augroup javascript
+  autocmd!
+  autocmd FileType javascript setlocal shiftwidth=4
+augroup END
+
 " Symfony
 set wildignore+=*/var/*,*/vendor/*
