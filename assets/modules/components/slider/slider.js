@@ -44,14 +44,14 @@ class Slider {
         let onClick = function() {
             let translateWidth;
             that.navBtnId = $(this).index();
-            if (that.navBtnId != that.slideNow) {
-                translateWidth = -that.viewport.width() * that.navBtnId;
+            if (that.navBtnId + 1 != that.currentSlide) {
+                translateWidth = -that.viewport.width() * (that.navBtnId);
                 that.wrapper.css({
                     'transform': 'translate(' + translateWidth + 'px, 0)',
                     '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
                     '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
                 });
-                that.slideNow = that.navBtnId;
+                that.currentSlide = that.navBtnId + 1;
             }
         }
         this.nav_btns.click(onClick);
@@ -59,11 +59,11 @@ class Slider {
 
     nextSlide() {
         let translateWidth;
-        if (this.currentSlide <= 0 || this.currentSlide >= this.slideAmount) {
+        if (this.currentSlide == this.slideAmount || this.currentSlide <= 0 || this.currentSlide > this.slideAmount) {
             this.wrapper.css('transform', 'translate(0, 0)');
             this.currentSlide = 1;
         } else {
-            translateWidth = -this.viewport.width() * this.currentSlide;
+            translateWidth = -this.viewport.width() * (this.currentSlide);
             this.wrapper.css({
                 'transform': 'translate(' + translateWidth + 'px, 0)',
                 '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
@@ -75,7 +75,7 @@ class Slider {
 
     prevSlide() {
         let translateWidth;
-        if (this.currentSlide <= 1 || this.currentSlide > this.slideAmount) {
+        if (this.currentSlide == 1 || this.currentSlide <= 0 || this.currentSlide > this.slideAmount) {
             translateWidth = -this.viewport.width() * (this.slideAmount - 1);
             this.wrapper.css({
                 'transform': 'translate(' + translateWidth + 'px, 0)',
