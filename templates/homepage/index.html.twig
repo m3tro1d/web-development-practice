@@ -27,15 +27,8 @@
       <li>Casual article writing.</li>
     </ul>
     
-    <h3 class="content-heading">Stuff</h3>
-    <ul>
-      <li><a href="{{ path('homepage-movies') }}">My favorite movies</a></li>
-      <li><a href="{{ path('homepage-lucky') }}">Get your lucky number!</a></li>
-      <li><a href="{{ path('homepage-headers') }}">Your request headers</a></li>
-    </ul>
-
-    <h3 class="content-heading">My favorite things</h3>
-    <small><i>Dynamically refreshed!</i></small>
+    <h3 class="content-heading favorite-heading">My favorite things</h3>
+    <small class="favorite-caption"><i>Dynamically refreshed!</i></small>
     <div class="favorites">
       {% for header, urls in favorites %}
         <h4 class="favorites__heading">{{ header }}</h4>
