@@ -2,6 +2,16 @@
 
 {% block title %}My homepage{% endblock %}
 
+{% block stylesheets %}
+  {{ parent() }}
+  {{ encore_entry_link_tags('about_me') }}
+{% endblock %}
+
+{% block javascript %}
+  {{ parent() }}
+  {{ encore_entry_script_tags('about_me') }}
+{% endblock %}
+
 {% block pagename %}Please have a seat.{% endblock %}
 
 {% block body %}
@@ -28,11 +38,24 @@
     <small><i>Dynamically refreshed!</i></small>
     <div class="favorites">
       {% for header, urls in favorites %}
-        <div class="favorites__block">
-          <h4 class="favorites__heading">{{ header }}</h4>
-          {% for url in urls %}
-            <img src="{{ url }}" alt="{{ header }} image" class="favorites__image" />
-          {% endfor %}
+        <h4 class="favorites__heading">{{ header }}</h4>
+        <div class="favorites__block slider">
+          <div class="slider__viewport">
+            <ul class="slider__slidewrapper">
+              {% for url in urls %}
+                <li class="slider__slide"><img class="slider__slide-img" src="{{ url }}" alt="{{ header }} image #{{ loop.index }}" /></li>
+              {% endfor %}
+            </ul>
+
+            <div class="slider__prev-btn"></div>
+            <div class="slider__next-btn"></div>
+
+            <ul class="slider__nav-btn-container">
+              {% for url in urls %}
+                <li class="slider__nav-btn"></li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       {% endfor %}
     </div>

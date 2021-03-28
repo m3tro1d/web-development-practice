@@ -89,35 +89,6 @@ div.content img.bordered
 }
 
 
-/* Favorites */
-.favorites__block
-{
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin-right: 4%;
-}
-
-.favorites__block:last-of-type
-{
-    margin-right: 0;
-}
-
-.favorites__heading
-{
-    margin: 20px 0 20px 0;
-    text-align: center;
-    color: #8989E5;
-}
-
-.favorites__image
-{
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
 /* Footer */
 footer#page-footer
 {
