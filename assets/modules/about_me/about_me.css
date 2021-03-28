@@ -4,8 +4,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-
-    font-family: 'Segoe UI', Verdana, Helvetica, sans-serif;
+    font-family: 'Open Sans', Calibri, sans-serif;
 }
 
 html,
@@ -27,7 +26,7 @@ a:hover
 
 a.external:after
 {
-    content: url('/images/external_arrow.png');
+    content: asset('images/external_arrow.png');
 }
 
 
@@ -86,6 +85,24 @@ div.content img.float-right
 div.content img.bordered
 {
     border-radius: 3%;
+}
+
+div.content h3.favorite-heading
+{
+    margin-top: 150px;
+    text-align: center;
+}
+
+div.content small.favorite-caption
+{
+    text-align: center;
+    display: block;
+}
+
+div.content h4.favorites__heading
+{
+    text-align: center;
+    margin-top: 10px;
 }
 
 

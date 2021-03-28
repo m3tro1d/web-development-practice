@@ -1,5 +1,6 @@
-import $ from 'jquery';
+import './about_me.css';
 
+import $ from 'jquery';
 import Slider from '../components/slider/slider';
 
 // Iterate through .slider-block blocks and make them dynamic
