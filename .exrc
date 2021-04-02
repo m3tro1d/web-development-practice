@@ -20,4 +20,4 @@ augroup javascript
 augroup END
 
 " Symfony
-set wildignore+=*/var/*,*/vendor/*
+set wildignore+=*/var/*,*/vendor/*,*/public/build/*
