@@ -24,10 +24,10 @@ a:hover
     color: #009d9d;
 }
 
-/* a.external:after */
-/* { */
-/*     content: asset('images/external_arrow.png'); */
-/* } */
+a.external:after
+{
+    content: url('../../images/external_arrow.png');
+}
 
 
 /* Header */

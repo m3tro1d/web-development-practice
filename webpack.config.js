@@ -22,6 +22,12 @@ Encore
      */
     .addEntry('about_me', './assets/modules/about_me/about_me.js')
 
+    // Binary assets
+    .copyFiles({
+        from: './assets/images',
+        to: 'images/[path][name].[hash:8].[ext]'
+    })
+
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 
