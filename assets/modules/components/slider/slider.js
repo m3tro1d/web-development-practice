@@ -17,7 +17,9 @@ class Slider {
         this.slideAmount = this.wrapper.children().length;
         this.sliderInterval = 2000;
         this.navBtnId = 0;
+    }
 
+    initialize() {
         this.startSlider();
         this.registerButtonEvents();
         this.registerNavButtonsEvents();
