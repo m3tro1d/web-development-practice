@@ -2,18 +2,3 @@ homepage-index:
     path: /
     controller: App\Controller\HomepageController::index
     methods: GET
-
-homepage-movies:
-    path: /movies
-    controller: App\Controller\HomepageController::movies
-    methods: GET
-
-homepage-lucky:
-    path: /lucky
-    controller: App\Controller\HomepageController::lucky
-    methods: GET
-
-homepage-headers:
-    path: /headers
-    controller: App\Controller\HomepageController::headers
-    methods: GET

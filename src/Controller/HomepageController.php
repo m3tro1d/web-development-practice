@@ -23,24 +23,4 @@ class HomepageController extends AbstractController
             'favorites' => $favorites
         ]);
     }
-
-    public function movies(): Response
-    {
-        return $this->render('homepage/movies.html.twig');
-    }
-
-    public function lucky(): Response
-    {
-        $number = random_int(0, 100);
-        return $this->render('homepage/lucky.html.twig', [
-            'number' => $number
-        ]);
-    }
-
-    public function headers(Request $request): Response
-    {
-        return $this->render('homepage/headers.html.twig', [
-            'headers' => $request->headers->all()
-        ]);
-    }
 }

@@ -4,8 +4,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-
-    font-family: 'Segoe UI', Verdana, Helvetica, sans-serif;
+    font-family: 'Open Sans', Calibri, sans-serif;
 }
 
 html,
@@ -27,7 +26,7 @@ a:hover
 
 a.external:after
 {
-    content: url('/images/external_arrow.png');
+    content: url('../../images/external_arrow.png');
 }
 
 
@@ -88,33 +87,22 @@ div.content img.bordered
     border-radius: 3%;
 }
 
-
-/* Favorites */
-.favorites__block
+div.content h3.favorite-heading
 {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin-right: 4%;
-}
-
-.favorites__block:last-of-type
-{
-    margin-right: 0;
-}
-
-.favorites__heading
-{
-    margin: 20px 0 20px 0;
+    margin-top: 150px;
     text-align: center;
-    color: #8989E5;
 }
 
-.favorites__image
+div.content small.favorite-caption
 {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+}
+
+div.content h4.favorites__heading
+{
+    text-align: center;
+    margin-top: 10px;
 }
 
 
