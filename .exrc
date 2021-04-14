@@ -1,22 +1,10 @@
 " HTML
 let g:emmet_html5 = 0
 
-" CSS
-augroup css
-  autocmd!
-  autocmd FileType css setlocal shiftwidth=4
-augroup END
-
 " PHP
-augroup php
+augroup web_indentation
   autocmd!
-  autocmd FileType php setlocal shiftwidth=4
-augroup END
-
-" Javascript
-augroup javascript
-  autocmd!
-  autocmd FileType javascript setlocal shiftwidth=4
+  autocmd FileType php,css,javascript setlocal shiftwidth=4
 augroup END
 
 " Symfony
