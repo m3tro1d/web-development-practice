@@ -10,7 +10,7 @@ class HobbieService
     private ImageProviderInterface $imageProvider;
     private HobbieConfigurationInterface $configuration;
 
-    public function __construct(ImageProvider $imageProvider, ConstHobbieConfiguration $configuration)
+    public function __construct(ImageProviderInterface $imageProvider, HobbieConfigurationInterface $configuration)
     {
         $this->imageProvider = $imageProvider;
         $this->configuration = $configuration;

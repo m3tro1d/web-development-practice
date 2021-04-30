@@ -5,7 +5,7 @@ class AboutMePageView
 {
     private array $hobbies;
 
-    public function __construct(array $hobbies)
+    public function __construct(array $hobbies) // array of App\Module\AboutMe\Model\Hobbie;
     {
         $this->hobbies = $hobbies;
     }
