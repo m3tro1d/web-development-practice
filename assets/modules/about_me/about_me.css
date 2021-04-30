@@ -26,7 +26,7 @@ a:hover
 
 a.external:after
 {
-    content: url('../../images/external_arrow.png');
+    content: url('images/external_arrow.png');
 }
 
 

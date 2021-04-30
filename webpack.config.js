@@ -24,8 +24,9 @@ Encore
 
     // Binary assets
     .copyFiles({
-        from: './assets/images',
-        to: 'images/[path][name].[hash:8].[ext]'
+        from: './assets/modules',
+        to: 'modules/[path][name].[hash:8].[ext]',
+        pattern: /\.(png|jpg|jpeg)$/
     })
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.

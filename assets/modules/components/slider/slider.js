@@ -2,7 +2,7 @@ import './slider.css';
 
 import $ from 'jquery';
 
-class Slider {
+export default class Slider {
     constructor(object) {
         // Slider objects
         this.master = $(object);
@@ -20,30 +20,31 @@ class Slider {
     }
 
     initialize() {
-        this.startSlider();
-        this.registerButtonEvents();
-        this.registerNavButtonsEvents();
+        this._startSlider();
+        this._registerButtonEvents();
+        this._registerNavButtonsEvents();
     }
 
-    startSlider() {
-        this.switchInterval = setInterval(this.nextSlide.bind(this), this.sliderInterval);
-        let onHoverUp = (function() {
+    _startSlider() {
+        this.switchInterval = setInterval(this._nextSlide.bind(this), this.sliderInterval);
+        const onHoverUp = (function() {
             clearInterval(this.switchInterval);
         }).bind(this);
-        let onHover = (function() {
-            this.switchInterval = setInterval(this.nextSlide.bind(this), this.sliderInterval);
+        const onHover = (function() {
+            this.switchInterval = setInterval(this._nextSlide.bind(this), this.sliderInterval);
         }).bind(this);
         this.viewport.hover(onHoverUp, onHover);
     }
 
-    registerButtonEvents() {
-        this.next_btn.click(this.nextSlide.bind(this));
-        this.prev_btn.click(this.prevSlide.bind(this));
+    _registerButtonEvents() {
+        this.next_btn.click(this._nextSlide.bind(this));
+        this.prev_btn.click(this._prevSlide.bind(this));
     }
 
-    registerNavButtonsEvents() {
-        let that = this;
-        let onClick = function() {
+    _registerNavButtonsEvents() {
+        // Save the slider as 'that', because we need 'this' for the event button id
+        const that = this;
+        const onClick = function() {
             let translateWidth;
             that.navBtnId = $(this).index();
             if (that.navBtnId + 1 != that.currentSlide) {
@@ -59,7 +60,7 @@ class Slider {
         this.nav_btns.click(onClick);
     }
 
-    nextSlide() {
+    _nextSlide() {
         let translateWidth;
         if (this.currentSlide == this.slideAmount || this.currentSlide <= 0 || this.currentSlide > this.slideAmount) {
             this.wrapper.css('transform', 'translate(0, 0)');
@@ -75,7 +76,7 @@ class Slider {
         }
     }
 
-    prevSlide() {
+    _prevSlide() {
         let translateWidth;
         if (this.currentSlide == 1 || this.currentSlide <= 0 || this.currentSlide > this.slideAmount) {
             translateWidth = -this.viewport.width() * (this.slideAmount - 1);
@@ -96,5 +97,3 @@ class Slider {
         }
     }
 }
-
-export default Slider;

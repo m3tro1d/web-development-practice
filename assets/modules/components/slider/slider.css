@@ -37,12 +37,14 @@
     align-items: center;
 }
 
-.slider__slidewrapper ul, .slider__slidewrapper li {
+.slider__slidewrapper ul, .slider__slidewrapper li
+{
     margin: 0;
     padding: 0;
 }
 
-.slider__slidewrapper li {
+.slider__slidewrapper li
+{
     width: calc(100% / 5);
     list-style: none;
     display: inline;
