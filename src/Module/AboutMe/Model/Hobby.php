@@ -7,24 +7,24 @@ class Hobby
     private string $name;
     private array $images;
 
-    function __construct(string $keyword, string $name, array $images)
+    public function __construct(string $keyword, string $name, array $images)
     {
         $this->keyword = $keyword;
         $this->name = $name;
         $this->images = $images;
     }
 
-    function getKeyword(): string
+    public function getKeyword(): string
     {
         return $this->keyword;
     }
 
-    function getName(): string
+    public function getName(): string
     {
         return $this->name;
     }
 
-    function getImages(): array
+    public function getImages(): array
     {
         return $this->images;
     }
