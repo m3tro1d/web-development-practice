@@ -1,11 +1,11 @@
 <?php
 namespace App\Module\AboutMe\Infrastructure;
 
-use App\Module\AboutMe\App\HobbieConfigurationInterface;
+use App\Module\AboutMe\App\HobbyConfigurationInterface;
 
-class ConstHobbieConfiguration implements HobbieConfigurationInterface
+class ConstHobbyConfiguration implements HobbyConfigurationInterface
 {
-    public function getHobbieMap(): array
+    public function getHobbyMap(): array
     {
         return [
             'Programming',

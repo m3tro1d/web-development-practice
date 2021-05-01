@@ -1,7 +1,7 @@
 <?php
 namespace App\Module\AboutMe\Model;
 
-class Hobbie
+class Hobby
 {
     private string $keyword;
     private string $name;

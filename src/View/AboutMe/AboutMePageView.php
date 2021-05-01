@@ -6,7 +6,7 @@ class AboutMePageView
     private array $hobbies;
 
     /**
-     * @param []Hobbie $hobbies
+     * @param []Hobby $hobbies
      */
     public function __construct(array $hobbies)
     {
@@ -16,9 +16,9 @@ class AboutMePageView
     public function buildParams(): array
     {
         $hobbiesParam = [];
-        foreach ($this->hobbies as $hobbie)
+        foreach ($this->hobbies as $hobby)
         {
-            $hobbiesParam[$hobbie->getName()] = $hobbie->getImages();
+            $hobbiesParam[$hobby->getName()] = $hobby->getImages();
         }
         return [ 'hobbies' => $hobbiesParam, ];
     }
