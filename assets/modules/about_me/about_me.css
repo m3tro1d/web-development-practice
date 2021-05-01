@@ -35,8 +35,7 @@ header#page-header
 {
     width: 98%;
 
-    padding: 2%;
-    padding-left: 0;
+    padding: 2% 2% 2% 0;
 }
 
 header#page-header div#page-name
@@ -87,19 +86,19 @@ div.content img.bordered
     border-radius: 3%;
 }
 
-div.content h3.favorite-heading
+div.content h3.hobby-heading
 {
     margin-top: 150px;
     text-align: center;
 }
 
-div.content small.favorite-caption
+div.content small.hobby-caption
 {
     text-align: center;
     display: block;
 }
 
-div.content h4.favorites__heading
+div.content h4.hobby__heading
 {
     text-align: center;
     margin-top: 10px;
@@ -111,8 +110,7 @@ footer#page-footer
 {
     width: 98%;
 
-    padding: 2%;
-    padding-left: 0;
+    padding: 2% 2% 2% 0;
 }
 
 footer#page-footer div#copy-notice

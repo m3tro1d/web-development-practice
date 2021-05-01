@@ -27,12 +27,12 @@
       <li>Casual article writing.</li>
     </ul>
     
-    <h3 class="content-heading favorite-heading">My favorite things</h3>
-    <small class="favorite-caption"><i>Dynamically refreshed!</i></small>
+    <h3 class="content-heading hobby-heading">My favorite things</h3>
+    <small class="hobby-caption"><i>Dynamically refreshed!</i></small>
     <div class="favorites">
       {% for header, urls in hobbies %}
-        <h4 class="favorites__heading">{{ header }}</h4>
-        <div class="favorites__block slider">
+        <h4 class="hobby__heading">{{ header }}</h4>
+        <div class="hobby__block slider">
           <div class="slider__viewport">
             <ul class="slider__slidewrapper">
               {% for url in urls %}
