@@ -14,6 +14,7 @@ class ImageProvider implements ImageProviderInterface
         $urls = ImageSpider::find(urlencode($keyword));
         return $this->randomizeAndLimit($urls);
     }
+
     private function randomizeAndLimit(array $urls): array
     {
         shuffle($urls);

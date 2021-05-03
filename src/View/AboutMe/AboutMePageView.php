@@ -20,6 +20,6 @@ class AboutMePageView
         {
             $hobbiesParam[$hobby->getName()] = $hobby->getImages();
         }
-        return [ 'hobbies' => $hobbiesParam, ];
+        return [ 'hobbies' => $hobbiesParam ];
     }
 }
