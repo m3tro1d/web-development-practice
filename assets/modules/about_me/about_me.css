@@ -104,6 +104,25 @@ div.content h4.hobby__heading
     margin-top: 10px;
 }
 
+button.hobbies__update-btn
+{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+
+    font: 16px "Comic Sans MS", sans-serif;
+    border: 2px solid silver;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #d7d7d7;
+}
+
+button.hobbies__update-btn:hover,
+button.hobbies__update-btn:active
+{
+    background-color: #c8c8c8;
+}
+
 
 /* Footer */
 footer#page-footer
