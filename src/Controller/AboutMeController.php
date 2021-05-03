@@ -15,8 +15,9 @@ class AboutMeController extends AbstractController
         return $this->render('homepage/index.html.twig', $view->buildParams());
     }
 
-    public function updateImages(): Response
+    public function updateImages(HobbyService $hs): Response
     {
+        $hs->updateHobbies();
         return new Response(
             'OK',
             Response::HTTP_OK,
