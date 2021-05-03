@@ -11,13 +11,17 @@ $(document).ready(() => {
   })
 
   // Add update button handler
+  const updateInfo = $('#update-info');
   $('#update-btn').click(() => {
     $.ajax({
       url: '/update',
       method: 'POST',
     })
       .done(res => {
-        console.log(res);
+        updateInfo.text('Success! Refresh the page to see the new images.');
+      })
+      .fail((jqXHR, textStatus) => {
+        updateInfo.text('Oops... Something went wrong.');
       });
   });
 });

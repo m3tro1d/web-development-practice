@@ -123,6 +123,11 @@ button.hobbies__update-btn:active
     background-color: #c8c8c8;
 }
 
+div.hobbies__update-info
+{
+    text-align: center;
+}
+
 
 /* Footer */
 footer#page-footer
