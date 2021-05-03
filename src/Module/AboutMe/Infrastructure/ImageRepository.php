@@ -4,7 +4,7 @@ namespace App\Module\AboutMe\Infrastructure;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectRepository;
 
-use App\Entity\SavedUrl;
+use App\Entity\Image;
 use App\Module\AboutMe\App\ImageRepositoryInterface;
 
 class ImageRepository implements ImageRepositoryInterface
@@ -15,7 +15,7 @@ class ImageRepository implements ImageRepositoryInterface
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
-        $this->repository = $this->entityManager->getRepository(SavedUrl::class);
+        $this->repository = $this->entityManager->getRepository(Image::class);
     }
 
     public function thereAreCachedImages(string $keyword): bool
@@ -43,7 +43,7 @@ class ImageRepository implements ImageRepositoryInterface
     {
         foreach ($urls as $url)
         {
-            $image = new SavedUrl();
+            $image = new Image();
             $image->setKeyword($keyword);
             $image->setUrl($url);
             $this->entityManager->persist($image);

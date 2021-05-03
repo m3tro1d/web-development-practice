@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\SavedUrlRepository;
+use App\Repository\ImageRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=SavedUrlRepository::class)
+ * @ORM\Entity(repositoryClass=ImageRepository::class)
  */
-class SavedUrl
+class Image
 {
     /**
      * @ORM\Id
