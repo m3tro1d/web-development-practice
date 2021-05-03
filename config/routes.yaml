@@ -1,4 +1,9 @@
-homepage-index:
+about_me_index:
     path: /
     controller: App\Controller\AboutMeController::aboutMePage
     methods: GET
+
+about_me_update:
+    path: /update
+    controller: App\Controller\AboutMeController::updateImages
+    methods: POST
