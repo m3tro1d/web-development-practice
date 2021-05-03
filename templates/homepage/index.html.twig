@@ -29,7 +29,7 @@
     
     <h3 class="content-heading hobby-heading">My favorite things</h3>
     <small class="hobby-caption"><i>Dynamically refreshed!</i></small>
-    <div class="favorites">
+    <div class="hobbies">
       {% for header, urls in hobbies %}
         <h4 class="hobby__heading">{{ header }}</h4>
         <div class="hobby__block slider">
@@ -51,6 +51,8 @@
           </div>
         </div>
       {% endfor %}
+      <button class="hobbies__update-btn" id="update-btn">Update</button>
+      <div class="hobbies__update-info" id="update-info"></div>
     </div>
   </div>
 {% endblock %}

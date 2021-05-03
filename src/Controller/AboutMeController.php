@@ -14,4 +14,14 @@ class AboutMeController extends AbstractController
         $view = new AboutMePageView($hs->getHobbies());
         return $this->render('homepage/index.html.twig', $view->buildParams());
     }
+
+    public function updateImages(HobbyService $hs): Response
+    {
+        $hs->updateHobbies();
+        return new Response(
+            'OK',
+            Response::HTTP_OK,
+            ['Content-Type' => 'text/plain']
+        );
+    }
 }
