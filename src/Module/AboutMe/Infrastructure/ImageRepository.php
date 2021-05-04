@@ -4,8 +4,8 @@ namespace App\Module\AboutMe\Infrastructure;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectRepository;
 
-use App\Entity\Image;
 use App\Module\AboutMe\App\ImageRepositoryInterface;
+use App\Entity\Image;
 
 class ImageRepository implements ImageRepositoryInterface
 {
@@ -31,12 +31,7 @@ class ImageRepository implements ImageRepositoryInterface
         $images = $this->repository->findBy([
             'keyword' => $keyword,
         ]);
-        $urls = [];
-        foreach ($images as $image)
-        {
-            $urls[] = $image->getUrl();
-        }
-        return $urls;
+        return array_map(fn(Image $image) => $image->getUrl(), $images);
     }
 
     public function cacheImages(string $keyword, array $urls): void
