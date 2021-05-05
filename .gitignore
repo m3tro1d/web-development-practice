@@ -24,3 +24,6 @@ yarn-error.log
 
 # IDE config
 .idea/
+
+# Vim config
+.exrc
