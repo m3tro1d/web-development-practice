@@ -18,10 +18,6 @@ class AboutMeController extends AbstractController
     public function updateImages(HobbyService $hs): Response
     {
         $hs->updateHobbies();
-        return new Response(
-            'OK',
-            Response::HTTP_OK,
-            ['Content-Type' => 'text/plain']
-        );
+        return new Response('OK');
     }
 }
