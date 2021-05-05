@@ -18,20 +18,14 @@ class ImageRepository implements ImageRepositoryInterface
         $this->repository = $this->entityManager->getRepository(Image::class);
     }
 
-    public function thereAreCachedImages(string $keyword): bool
+    public function getCachedImages(string $keyword): ?array
     {
         $images = $this->repository->findBy([
             'keyword' => $keyword,
         ]);
-        return !empty($images);
-    }
-
-    public function getCachedImages(string $keyword): array
-    {
-        $images = $this->repository->findBy([
-            'keyword' => $keyword,
-        ]);
-        return array_map(fn(Image $image) => $image->getUrl(), $images);
+        return empty($images)
+            ? null
+            : array_map(fn(Image $image) => $image->getUrl(), $images);
     }
 
     public function cacheImages(string $keyword, array $urls): void

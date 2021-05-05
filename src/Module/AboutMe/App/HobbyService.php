@@ -27,11 +27,8 @@ class HobbyService
 
         foreach ($hobbyMap as $hobbyName)
         {
-            if ($this->imageRepository->thereAreCachedImages($hobbyName))
-            {
-                $images = $this->imageRepository->getCachedImages($hobbyName);
-            }
-            else
+            $images = $this->imageRepository->getCachedImages($hobbyName);
+            if (empty($images))
             {
                 $images = $this->imageProvider->getImageUrls($hobbyName);
                 $this->imageRepository->cacheImages($hobbyName, $images);
