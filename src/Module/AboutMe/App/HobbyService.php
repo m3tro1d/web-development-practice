@@ -20,6 +20,9 @@ class HobbyService
         $this->imageRepository = $imageRepository;
     }
 
+    /**
+     * @return []Hobby
+     */
     public function getHobbies(): array
     {
         $hobbies = [];
@@ -33,7 +36,7 @@ class HobbyService
                 $images = $this->imageProvider->getImageUrls($hobbyName);
                 $this->imageRepository->cacheImages($hobbyName, $images);
             }
-            $hobbies[] = new Hobby($hobbyName, $hobbyName, $images);
+            $hobbies[] = new Hobby($hobbyName, $images);
         }
 
         return $hobbies;

@@ -18,7 +18,7 @@ class AboutMePageView
         $hobbiesParam = [];
         foreach ($this->hobbies as $hobby)
         {
-            $hobbiesParam[$hobby->getName()] = $hobby->getImages();
+            $hobbiesParam[$hobby->getKeyword()] = $hobby->getImages();
         }
         return [ 'hobbies' => $hobbiesParam ];
     }
