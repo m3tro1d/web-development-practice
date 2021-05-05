@@ -125,6 +125,7 @@ button.hobbies__update-btn:active
 
 div.hobbies__update-info
 {
+    margin-top: 20px;
     text-align: center;
 }
 
