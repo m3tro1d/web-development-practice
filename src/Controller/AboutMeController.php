@@ -12,7 +12,7 @@ class AboutMeController extends AbstractController
     public function aboutMePage(HobbyService $hs): Response
     {
         $view = new AboutMePageView($hs->getHobbies());
-        return $this->render('homepage/index.html.twig', $view->buildParams());
+        return $this->render('about_me/index.html.twig', $view->buildParams());
     }
 
     public function updateImages(HobbyService $hs): Response
