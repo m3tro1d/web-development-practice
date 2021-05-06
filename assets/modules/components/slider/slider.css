@@ -8,7 +8,8 @@
 .slider__viewport
 {
     width: 100%;
-    border: 2px solid silver;
+    border: 2px solid #33aaff;
+    border-radius: 5px;
     display: table;
     position: relative;
     overflow: hidden;

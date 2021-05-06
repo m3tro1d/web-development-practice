@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}My homepage{% endblock %}
+{% block title %}About Me{% endblock %}
 
 {% block stylesheets %}
   {{ parent() }}
@@ -15,20 +15,20 @@
 {% block pagename %}Please have a seat.{% endblock %}
 
 {% block body %}
-  <div class="content content-halfpage">
-    <h1 class="content-heading">Welcome!</h1>
-    <img src="{{ asset('build/modules/about_me/images/pfp.jpg') }}" alt="My profile picture" class="float-right small bordered" />
-    <p>Welcome to my page. Be sure to check out my node.js <a href="https://m3tro1d.herokuapp.com" target="_blank" class="external">website</a>.</p>
+  <div class="page-content_halfpage">
+    <h1 class="page-content__primary-heading">Welcome!</h1>
+    <img src="{{ asset('build/modules/about_me/images/pfp.jpg') }}" alt="My profile picture" class="page-content__pfp" />
+    <p>Welcome to my page. Be sure to check out my node.js <a href="https://m3tro1d.herokuapp.com" target="_blank" rel="noopener noreferrer" class="link">website</a>.</p>
 
-    <h3 class="content-heading">My skills and hobbies</h3>
+    <h3 class="page-content__secondary-heading">My skills and hobbies</h3>
     <ul>
       <li>Computer programming: C, C++, Python, JavaScript, a bit of Scheme, some of batch and Vim scripting;</li>
       <li>Cycling;</li>
       <li>Casual article writing.</li>
     </ul>
-    
-    <h3 class="content-heading hobby-heading">My favorite things</h3>
-    <small class="hobby-caption"><i>Dynamically refreshed!</i></small>
+
+    <h3 class="page-content__secondary-heading page-content__hobby-heading">My favorite things</h3>
+    <small class="page-content__hobby-caption"><i>Dynamically refreshed!</i></small>
     <div class="hobbies">
       {% for header, urls in hobbies %}
         <h4 class="hobby__heading">{{ header }}</h4>

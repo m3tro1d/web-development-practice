@@ -4,142 +4,134 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Open Sans', Calibri, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.03em;
 }
 
-html,
-body
+.link
 {
-    height: 100%;
-    width: 100%;
+    color: #33aaff;
+    transition: .5s;
 }
 
-a
+.link:hover,
+.link:active
 {
-    color: #00c6c6;
-}
-
-a:hover
-{
-    color: #009d9d;
-}
-
-a.external:after
-{
-    content: url('images/external_arrow.png');
+    filter: brightness(.9);
 }
 
 
 /* Header */
-header#page-header
+.page-header
 {
     width: 98%;
-
-    padding: 2% 2% 2% 0;
+    padding: 2%;
+    padding-left: 0;
 }
 
-header#page-header div#page-name
+.page-header__page-name
 {
     font-size: 1.3em;
     font-weight: bold;
-
     width: 50%;
     margin: auto;
 }
 
 
 /* Content */
-div.content
+.page-content
 {
     padding: 1%;
 }
 
-div.content-halfpage
+.page-content_halfpage
 {
     margin-left: 25%;
     width: 48%;
 }
 
-div.content h1.content-heading
+.page-content__primary-heading
 {
+    font-weight: bold;
     margin: 25px 0 10px;
 }
 
-div.content h3.content-heading
+.page-content__secondary-heading
 {
+    font-weight: bold;
     margin: 25px 0 5px;
 }
 
-div.content img.small
+.page-content__pfp
 {
     max-height: 300px;
     width: auto;
-}
-
-div.content img.float-right
-{
     float: right;
+    border-radius: 3px;
+    transition: .3s linear;
 }
 
-div.content img.bordered
+.page-content__pfp:hover
 {
-    border-radius: 3%;
+    transform: scale(1.05);
 }
 
-div.content h3.hobby-heading
+.page-content__hobby-heading
 {
     margin-top: 150px;
     text-align: center;
 }
 
-div.content small.hobby-caption
+.page-content__hobby-caption
 {
+    font-style: italic;
     text-align: center;
     display: block;
 }
 
-div.content h4.hobby__heading
+.hobby__heading
 {
+    font-weight: bold;
     text-align: center;
     margin-top: 10px;
 }
 
-button.hobbies__update-btn
+.hobbies__update-btn
 {
     display: block;
     width: 150px;
     margin: 0 auto;
-
-    font: 16px "Comic Sans MS", sans-serif;
-    border: 2px solid silver;
-    border-radius: 3px;
-    padding: 10px;
-    background-color: #d7d7d7;
+    padding: 15px;
+    font: bold 18px Consolas, monospace;
+    background-color: #33aaff;
+    border: none;
+    border-radius: 5px;
 }
 
-button.hobbies__update-btn:hover,
-button.hobbies__update-btn:active
+.hobbies__update-btn:hover,
+.hobbies__update-btn:active
 {
-    background-color: #c8c8c8;
+    filter: brightness(.9);
 }
 
-div.hobbies__update-info
+.hobbies__update-info
 {
     margin-top: 20px;
     text-align: center;
+    font-style: italic;
 }
 
 
 /* Footer */
-footer#page-footer
+.page-footer
 {
     width: 98%;
-
-    padding: 2% 2% 2% 0;
+    padding: 2%;
+    padding-left: 0;
 }
 
-footer#page-footer div#copy-notice
+.page-footer__copyright
 {
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
 }

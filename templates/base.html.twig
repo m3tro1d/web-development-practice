@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <title>{% block title %}{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-  </head>
-  <body>
-    <header id="page-header">
-      <div id="page-name">{% block pagename %}{% endblock %}</div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  {% block stylesheets %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__page-name">{% block pagename %}{% endblock %}</div>
+  </header>
 
+  <div class="page-content">
     {% block body %}
     {% endblock %}
+  </div>
 
-    <footer id="page-footer">
-      <div id="copy-notice">&copy; m3tro1d, 2021</div>
-    </footer>
+  <footer class="page-footer">
+    <div class="page-footer__copyright">&copy; m3tro1d, 2021</div>
+  </footer>
 
-    {% block javascript %}{% endblock %}
-  </body>
+  {% block javascript %}{% endblock %}
+</body>
 </html>
