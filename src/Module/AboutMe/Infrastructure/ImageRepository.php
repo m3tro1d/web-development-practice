@@ -5,7 +5,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ObjectRepository;
 
 use App\Module\AboutMe\App\ImageRepositoryInterface;
-use App\Entity\Image;
+use App\Module\AboutMe\Model\Image;
 
 class ImageRepository implements ImageRepositoryInterface
 {
