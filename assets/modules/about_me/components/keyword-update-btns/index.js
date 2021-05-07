@@ -2,6 +2,7 @@ import './styles.css'
 
 import $ from 'jquery';
 
+
 export default function handleKeywordUpdate(btnObject) {
   const btn = $(btnObject);
   const updateInfo = $(btn.next());

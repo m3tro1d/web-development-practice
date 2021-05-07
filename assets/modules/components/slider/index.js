@@ -2,6 +2,7 @@ import './styles.css';
 
 import $ from 'jquery';
 
+
 export default class Slider {
   constructor(object) {
     // Slider objects

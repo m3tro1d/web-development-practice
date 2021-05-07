@@ -6,6 +6,7 @@ import Slider from '../components/slider';
 import handleKeywordUpdate from './components/keyword-update-btns';
 import handleHobbiesUpdate from './components/hobbies-update-btn';
 
+
 $(document).ready(() => {
   // Iterate through all the .slider blocks and make them dynamic
   $('.slider').each((i, obj) => {
@@ -13,8 +14,10 @@ $(document).ready(() => {
     slider.initialize();
   })
 
-  // Add update button handlers
+  // Update all hobbies
   handleHobbiesUpdate($('#update-btn'));
+
+  // Update hobbies by keyword
   $('.hobbies__update-keyword-btn').each((i, btn) => {
     handleKeywordUpdate(btn);
   });
