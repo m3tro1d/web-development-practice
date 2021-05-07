@@ -1,7 +1,10 @@
 import './about_me.css';
 
 import $ from 'jquery';
-import Slider from '../components/slider/slider';
+
+import Slider from '../components/slider';
+import handleKeywordUpdate from './components/keyword-update-btns';
+import handleHobbiesUpdate from './components/hobbies-update-btn';
 
 $(document).ready(() => {
   // Iterate through all the .slider blocks and make them dynamic
@@ -10,18 +13,9 @@ $(document).ready(() => {
     slider.initialize();
   })
 
-  // Add update button handler
-  const updateInfo = $('#update-info');
-  $('#update-btn').click(() => {
-    $.ajax({
-      url: '/update',
-      method: 'POST',
-    })
-      .done(res => {
-        updateInfo.text('Success! Refresh the page to see the new images.');
-      })
-      .fail((jqXHR, textStatus) => {
-        updateInfo.text('Oops... Something went wrong.');
-      });
+  // Add update button handlers
+  handleHobbiesUpdate($('#update-btn'));
+  $('.hobbies__update-keyword-btn').each((i, btn) => {
+    handleKeywordUpdate(btn);
   });
 });

@@ -1,0 +1,27 @@
+.hobbies__update-keyword-btn
+{
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    padding: 13px;
+
+    font: bold 16px Consolas, monospace;
+    background-color: #33aaff;
+    border: none;
+    border-radius: 5px;
+}
+
+.hobbies__update-keyword-btn:hover,
+.hobbies__update-keyword-btn:active
+{
+    filter: brightness(.9);
+}
+
+.hobbies__update-keyword-info
+{
+    margin: 10px auto 50px auto;
+    width: 70%;
+
+    text-align: center;
+    font-style: italic;
+}

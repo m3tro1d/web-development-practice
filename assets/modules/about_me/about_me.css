@@ -96,31 +96,6 @@
     margin-top: 10px;
 }
 
-.hobbies__update-btn
-{
-    display: block;
-    width: 150px;
-    margin: 0 auto;
-    padding: 15px;
-    font: bold 18px Consolas, monospace;
-    background-color: #33aaff;
-    border: none;
-    border-radius: 5px;
-}
-
-.hobbies__update-btn:hover,
-.hobbies__update-btn:active
-{
-    filter: brightness(.9);
-}
-
-.hobbies__update-info
-{
-    margin-top: 20px;
-    text-align: center;
-    font-style: italic;
-}
-
 
 /* Footer */
 .page-footer
