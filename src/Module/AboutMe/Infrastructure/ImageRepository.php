@@ -40,9 +40,19 @@ class ImageRepository implements ImageRepositoryInterface
         $this->entityManager->flush();
     }
 
-    public function pruneImageCache(): void
+    public function pruneImageCache(string $keyword): void
     {
-        $images = $this->repository->findAll();
+        if (empty($keyword))
+        {
+            $images = $this->repository->findAll();
+        }
+        else
+        {
+            $images = $this->repository->findBy([
+                'keyword' => $keyword,
+            ]);
+        }
+
         if (!empty($images))
         {
             array_map(fn(Image $image) => $this->entityManager->remove($image), $images);

@@ -42,8 +42,8 @@ class HobbyService
         return $hobbies;
     }
 
-    public function updateHobbies(): void
+    public function updateHobbies(string $keyword = ''): void
     {
-        $this->imageRepository->pruneImageCache();
+        $this->imageRepository->pruneImageCache($keyword);
     }
 }

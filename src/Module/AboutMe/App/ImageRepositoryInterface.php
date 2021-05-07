@@ -7,5 +7,5 @@ interface ImageRepositoryInterface
 
     public function cacheImages(string $keyword, array $urls): void;
 
-    public function pruneImageCache(): void;
+    public function pruneImageCache(string $keyword): void;
 }

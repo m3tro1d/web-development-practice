@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -15,9 +16,9 @@ class AboutMeController extends AbstractController
         return $this->render('about_me/index.html.twig', $view->buildParams());
     }
 
-    public function updateImages(HobbyService $hs): Response
+    public function updateImages(HobbyService $hs, Request $request): Response
     {
-        $hs->updateHobbies();
+        $hs->updateHobbies($request->query->get('keyword') ?? '');
         return new Response('OK');
     }
 }
