@@ -30,11 +30,11 @@ class HobbyService
 
         foreach ($hobbyMap as $hobbyName)
         {
-            $images = $this->imageRepository->getCachedImages($hobbyName);
+            $images = $this->imageRepository->getImages($hobbyName);
             if (empty($images))
             {
                 $images = $this->imageProvider->getImageUrls($hobbyName);
-                $this->imageRepository->cacheImages($hobbyName, $images);
+                $this->imageRepository->addImages($hobbyName, $images);
             }
             $hobbies[] = new Hobby($hobbyName, $images);
         }
@@ -44,6 +44,6 @@ class HobbyService
 
     public function updateHobbies(string $keyword): void
     {
-        $this->imageRepository->pruneImageCache($keyword);
+        $this->imageRepository->deleteImages($keyword);
     }
 }

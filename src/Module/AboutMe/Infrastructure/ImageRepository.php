@@ -18,7 +18,7 @@ class ImageRepository implements ImageRepositoryInterface
         $this->repository = $this->entityManager->getRepository(Image::class);
     }
 
-    public function getCachedImages(string $keyword): ?array
+    public function getImages(string $keyword): ?array
     {
         $images = $this->repository->findBy([
             'keyword' => $keyword,
@@ -28,7 +28,7 @@ class ImageRepository implements ImageRepositoryInterface
             : array_map(fn(Image $image) => $image->getUrl(), $images);
     }
 
-    public function cacheImages(string $keyword, array $urls): void
+    public function addImages(string $keyword, array $urls): void
     {
         foreach ($urls as $url)
         {
@@ -40,7 +40,7 @@ class ImageRepository implements ImageRepositoryInterface
         $this->entityManager->flush();
     }
 
-    public function pruneImageCache(string $keyword): void
+    public function deleteImages(string $keyword): void
     {
         if ($keyword === '')
         {
