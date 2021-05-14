@@ -1,56 +1,32 @@
 <?php
+declare(strict_types=1);
+
 namespace App\Module\AboutMe\Model;
 
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * @ORM\Entity
- */
 class Image
 {
-    /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+    private int $id;
+    private string $keyword;
+    private string $url;
 
-    /**
-     * @ORM\Column(type="string", length=511)
-     */
-    private $url;
+    public function __construct(string $keyword, string $url)
+    {
+        $this->keyword = $keyword;
+        $this->url = $url;
+    }
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $keyword;
-
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getUrl(): ?string
-    {
-        return $this->url;
-    }
-
-    public function setUrl(string $url): self
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    public function getKeyword(): ?string
+    public function getKeyword(): string
     {
         return $this->keyword;
     }
 
-    public function setKeyword(string $keyword): self
+    public function getUrl(): string
     {
-        $this->keyword = $keyword;
-
-        return $this;
+        return $this->url;
     }
 }

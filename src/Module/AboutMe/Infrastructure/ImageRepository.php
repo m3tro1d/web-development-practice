@@ -32,9 +32,7 @@ class ImageRepository implements ImageRepositoryInterface
     {
         foreach ($urls as $url)
         {
-            $image = new Image();
-            $image->setKeyword($keyword);
-            $image->setUrl($url);
+            $image = new Image($keyword, $url);
             $this->entityManager->persist($image);
         }
         $this->entityManager->flush();
