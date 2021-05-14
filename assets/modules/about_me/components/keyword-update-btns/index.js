@@ -9,8 +9,11 @@ export default function handleKeywordUpdate(btnObject) {
   const keyword = getKeyword(btn);
   btn.click(() => {
     $.ajax({
-      url: `/update?keyword=${keyword}`,
+      url: `/update`,
       method: 'POST',
+      data: {
+        keyword,
+      }
     })
       .done(res => {
         updateInfo.text(`Successfully updated "${keyword}"! Refresh the page to see the new images.`);
