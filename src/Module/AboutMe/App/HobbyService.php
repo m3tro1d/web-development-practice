@@ -33,8 +33,8 @@ class HobbyService
             $images = $this->imageRepository->getImages($hobbyName);
             if (empty($images))
             {
-                $images = $this->imageProvider->getImageUrls($hobbyName);
-                $this->imageRepository->addImages($hobbyName, $images);
+                $this->updateHobbies($hobbyName);
+                $images = $this->imageRepository->getImages($hobbyName);
             }
             $hobbies[] = new Hobby($hobbyName, $images);
         }
@@ -44,6 +44,21 @@ class HobbyService
 
     public function updateHobbies(string $keyword): void
     {
-        $this->imageRepository->deleteImages($keyword);
+        if ($keyword === '')
+        {
+            $this->imageRepository->deleteImages();
+            $hobbyMap = $this->configuration->getHobbyMap();
+            foreach ($hobbyMap as $hobbyName)
+            {
+                $images = $this->imageProvider->getImageUrls($hobbyName);
+                $this->imageRepository->addImages($hobbyName, $images);
+            }
+        }
+        else
+        {
+            $this->imageRepository->deleteImages($keyword);
+            $images = $this->imageProvider->getImageUrls($keyword);
+            $this->imageRepository->addImages($keyword, $images);
+        }
     }
 }

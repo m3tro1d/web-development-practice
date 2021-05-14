@@ -38,7 +38,7 @@ class ImageRepository implements ImageRepositoryInterface
         $this->entityManager->flush();
     }
 
-    public function deleteImages(string $keyword): void
+    public function deleteImages(string $keyword = ''): void
     {
         if ($keyword === '')
         {
