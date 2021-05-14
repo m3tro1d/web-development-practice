@@ -42,7 +42,7 @@ class ImageRepository implements ImageRepositoryInterface
 
     public function pruneImageCache(string $keyword): void
     {
-        if (empty($keyword))
+        if ($keyword === '')
         {
             $images = $this->repository->findAll();
         }
