@@ -7,5 +7,5 @@ interface ImageRepositoryInterface
 
     public function addImages(string $keyword, array $urls): void;
 
-    public function deleteImages(string $keyword): void;
+    public function deleteImages(string $keyword = ''): void;
 }
