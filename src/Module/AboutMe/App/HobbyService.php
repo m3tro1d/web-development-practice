@@ -21,7 +21,7 @@ class HobbyService
     }
 
     /**
-     * @return []Hobby
+     * @return Hobby[]
      */
     public function getHobbies(): array
     {

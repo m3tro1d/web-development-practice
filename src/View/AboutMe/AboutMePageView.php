@@ -1,12 +1,17 @@
 <?php
 namespace App\View\AboutMe;
 
+use App\Module\AboutMe\Model\Hobby;
+
 class AboutMePageView
 {
+    /**
+     * @var Hobby[]
+     */
     private array $hobbies;
 
     /**
-     * @param []Hobby $hobbies
+     * @param Hobby[] $hobbies
      */
     public function __construct(array $hobbies)
     {
