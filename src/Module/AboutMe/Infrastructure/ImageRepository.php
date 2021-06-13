@@ -23,7 +23,7 @@ class ImageRepository implements ImageRepositoryInterface
         $images = $this->repository->findBy([
             'keyword' => $keyword,
         ]);
-        return array_map(fn(Image $image) => $image->getUrl(), $images);
+        return array_map(static fn(Image $image) => $image->getUrl(), $images);
     }
 
     public function addImages(string $keyword, array $urls): void
@@ -51,7 +51,7 @@ class ImageRepository implements ImageRepositoryInterface
 
         if (!empty($images))
         {
-            array_map(fn(Image $image) => $this->entityManager->remove($image), $images);
+            array_map(static fn(Image $image) => $this->entityManager->remove($image), $images);
             $this->entityManager->flush();
         }
     }
