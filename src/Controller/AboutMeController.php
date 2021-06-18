@@ -1,12 +1,13 @@
 <?php
-namespace App\Controller;
+declare(strict_types=1);
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+namespace App\Controller;
 
 use App\Module\AboutMe\App\HobbyService;
 use App\View\AboutMe\AboutMePageView;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AboutMeController extends AbstractController
 {

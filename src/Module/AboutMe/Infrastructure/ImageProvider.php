@@ -1,9 +1,10 @@
 <?php
+declare(strict_types=1);
+
 namespace App\Module\AboutMe\Infrastructure;
 
-use IvanUskov\ImageSpider\ImageSpider;
-
 use App\Module\AboutMe\App\ImageProviderInterface;
+use IvanUskov\ImageSpider\ImageSpider;
 
 class ImageProvider implements ImageProviderInterface
 {
