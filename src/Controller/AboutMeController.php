@@ -11,15 +11,22 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AboutMeController extends AbstractController
 {
-    public function aboutMePage(HobbyService $hs): Response
+    private HobbyService $hs;
+
+    public function __construct(HobbyService $hs)
     {
-        $view = new AboutMePageView($hs->getHobbies());
+        $this->hs = $hs;
+    }
+
+    public function aboutMePage(): Response
+    {
+        $view = new AboutMePageView($this->hs->getHobbies());
         return $this->render('about_me/index.html.twig', $view->buildParams());
     }
 
-    public function updateImages(HobbyService $hs, Request $request): Response
+    public function updateImages(Request $request): Response
     {
-        $hs->updateHobbies($request->request->get('keyword') ?? '');
+        $this->hs->updateHobbies($request->request->get('keyword') ?? '');
         return new Response('OK');
     }
 }
